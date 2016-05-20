@@ -1,0 +1,1 @@
+The project is to design a software named "Andela Fellows Sports Management." However, this assignment contains the database system schema and some lines of queries to the database.
