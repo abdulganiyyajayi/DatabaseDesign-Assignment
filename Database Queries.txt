@@ -1,3 +1,41 @@
 This document contains some statements to generate desired reports from the database.
 
-***  
+
+***  To know the total number of teams    ***
+
+select count(*) from team
+
+
+
+
+***  To generate a list of all teams arranged alphabetically in ascending order  ***
+
+select * from team orderby team_name ASC
+
+
+
+
+***  to generate a list of fellows that are Team Leaders   ***
+
+select surname,lastname from fellow where role_id=(select role_id where title =’team_lead’ from role)
+
+
+
+
+***  To show the available sport types  ***
+
+select distinct sport_type from sports
+
+
+
+
+***  To display the available sports for each fellow! ***
+
+select * from fellow f, sport s where f.sport_id=s.sport_id
+
+
+
+
+***  To show the total number of fellows  ***
+
+select count(*) from fellow
